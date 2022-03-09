@@ -1,7 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+}
+
 nav, header, main {
     text-align: center;
 }
 
 body {
     font-family: sans-serif;
+    background-color: #2596be;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(gradient-background.png);
 }
