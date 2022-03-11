@@ -6,33 +6,22 @@
 
 header, main {
     text-align: center;
+    position: relative;
 }
 
 body {
     font-family: 'Raleway', sans-serif;
-    background: rgb(131, 58, 180);
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1), 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(90deg, #de354c, 0%, #932432 50%, #283747 100%);
 }
 
 .button-group button {
-    background-color: blue;
-    border: 1px solid black;
-    color: white;
-    padding: 10px 20px;
+    background-color: #283747;
+    border: 1px solid gray;
+    color: gray;
+    padding: 10px;
     cursor: pointer;
-    float: center;
-}
-
-.button-group button:not(:last-child) {
-    border-right: none;
-}
-
-.button-group:after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .button-group button:hover {
-    background-color:rgb(131, 58, 180);
+    background-color: #283747;
 }
