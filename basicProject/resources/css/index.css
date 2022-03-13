@@ -1,0 +1,20 @@
+.banner {
+    background-color: #4d00ff;
+    color: #fff;
+    margin-top: 75px;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+#streaming-logos {
+    height: 300px;
+}
+
+#CineMake-social {
+    color: #4d00ff;
+    font-size: 100px;
+}
+
+.bold {
+    font-weight: 900;
+}
