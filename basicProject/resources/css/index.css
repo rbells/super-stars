@@ -1,3 +1,7 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 .banner {
     background-color: #4d00ff;
     color: #fff;
@@ -17,4 +21,17 @@
 
 .bold {
     font-weight: 900;
+}
+
+.banner button {
+    background-color: #4d00ff;
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
 }
