@@ -35,3 +35,14 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
+.banner button:hover {
+    background-color: #fff;
+    color: #4d00ff;
+    transition: color .1s ease-in, background-color .1s ease-in;
+  }
+  
+  .banner button:active {
+    font-size: 14px;
+    transition: font-size .1s ease-in-out;
+  }
