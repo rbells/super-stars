@@ -53,6 +53,11 @@ const MenuItems = [
         title: 'Sign Up',
         url: 'signup',
         cName: 'nav-links'
+    },
+    {
+        title: 'Rate Movies',
+        url: 'ratemovies',
+        cName: 'nav-links'
     }
 ]
 export default Navbar;
