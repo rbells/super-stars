@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from "./components/Navbar/Navbar"
+import SocialFeed from "./components/SocialFeed";
+import Recommendations from "./components/Recommendations";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import SignUp from './components/SignUp';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/socialfeed" element={<SocialFeed />} />
+          <Route path="/recommendations" element={<Recommendations />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </div>
   );
 }
 
