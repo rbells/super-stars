@@ -25,6 +25,10 @@ function RateMovies() {
         getMovieRequest(searchValue);
     }, [searchValue])
 
+    const rateThisMovie = (movie) => {
+        console.log("ready to rate");
+        console.log(movie.Title);
+    }
     return(
     <div className='container-fluid movie-app'>
         <div className ='row d-flex align-items-center mt-4 mb-4'>
@@ -34,8 +38,8 @@ function RateMovies() {
             <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
         </div>
             <div className='row'>
-                <MovieList movies={movies}/>
-        </div>    
+                <MovieList handleClick={rateThisMovie} movies={movies}/>
+        </div> 
     </div>
     )
 }
