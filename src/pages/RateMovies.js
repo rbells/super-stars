@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./RateMovies.css";
-import MovieList from "./MovieList";
-import SearchBox from "./SearchBox";
+import MovieList from "../components/MovieList";
+import SearchBox from "../components/SearchBox";
 
 function RateMovies() {
 

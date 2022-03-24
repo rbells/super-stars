@@ -1,5 +1,5 @@
 import React from 'react';
-import './RateMovies.css';
+import '../pages/RateMovies.css';
 
 function MovieList(props) {
     return(
