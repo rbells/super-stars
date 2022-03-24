@@ -4,7 +4,7 @@ import SocialFeed from "./pages/SocialFeed";
 import Recommendations from "./pages/Recommendations";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import SignUp from './pages/SignUp';
-import RateMovies from './components/RateMovies';
+import RateMovies from './pages/RateMovies';
 import Profile from './pages/Profile';
 import './App.css';
 
