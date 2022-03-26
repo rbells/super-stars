@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom"
 import '../App.css';
 
 
@@ -27,7 +26,7 @@ class Authorize extends React.Component {
     authorize(e) {
         const password = e.target.querySelector(
             'input[type="password"]').value;
-        const auth = password == this.state.password;
+        const auth = password === this.state.password;
         this.setState({
             authorized: auth
         });
@@ -36,7 +35,9 @@ class Authorize extends React.Component {
     render() {
         const login = (
         <form action="#" onSubmit={this.authorize}>
-            <input type="password" placeholder="submit"></input>
+            <label for="password">Enter your password</label>
+            <br></br>
+            <input type="password" placeholder="Password" id="password"></input>
             <input type="submit"></input>
         </form>
         );
@@ -55,7 +56,7 @@ class Authorize extends React.Component {
         return (
             <div id="authorization">
                 <h1>
-                    { this.state.authorized ? 'loginText' : 'Enter your password'}
+                    { this.state.authorized ? 'loginText' : ''}
                 </h1>
                 { this.state.authorized ? loginText : login }
             </div>

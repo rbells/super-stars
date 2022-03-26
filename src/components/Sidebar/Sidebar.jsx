@@ -7,7 +7,7 @@ export default function sidebar() {
             <div className="SidebarWrapper">
                 <ul className="SidebarList">
                     <li className="SidebarListItem">
-                        *FeedIcon Placeholder*
+                        *FeedIcon*
                     </li>
                 </ul>
             </div>
