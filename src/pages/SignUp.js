@@ -34,12 +34,22 @@ class Authorize extends React.Component {
 
     render() {
         const login = (
-        <form action="#" onSubmit={this.authorize}>
-            <label for="password">Enter your password</label>
-            <br></br>
-            <input type="password" placeholder="Password" id="password"></input>
-            <input type="submit"></input>
-        </form>
+        <div>
+            
+            <form action="#">
+                <label for="username">Username</label>
+                <br></br>
+                <input type="username" placeholder="Username" id="username"></input>
+                <input type="submit"></input>
+            </form>
+        
+            <form action="#" onSubmit={this.authorize}>
+                <label for="password">Enter your password</label>
+                <br></br>
+                <input type="password" placeholder="Password" id="password"></input>
+                <input type="submit"></input>
+            </form>
+        </div>
         );
 
         const loginText = (
