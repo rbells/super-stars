@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import '../App.css';
 
 
-function SignUp() {
+export function SignUp() {
     return(
     <div>
         <h1>
