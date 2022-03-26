@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Sidebar.css";
-import FeedIcon from '@mui/icons-material/Feed';
 
 export default function sidebar() {
     return (
@@ -8,7 +7,7 @@ export default function sidebar() {
             <div className="SidebarWrapper">
                 <ul className="SidebarList">
                     <li className="SidebarListItem">
-                        <FeedIcon />
+                        *FeedIcon Placeholder*
                     </li>
                 </ul>
             </div>
