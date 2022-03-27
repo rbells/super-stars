@@ -1,0 +1,46 @@
+
+//PROFILE COMPONENT 
+class Profile
+{ constructor -- user info
+  setter -- ratings
+  setter -- reviews 
+  setter -- friends 
+}
+
+//SOCIAL FEED METHOD ....
+return_type generateSocialFeed(friend list names)
+{ get friends' reviews/ratings according to friend list names sorted by time stamp 
+  return friends' most recent ratings (recent to least recent)
+}
+
+//RATINGS COMPONENT 
+class Movie
+{ constructor -- movie object takes in genre, etc
+  //Data like genre, release year, etc. taken from IMDB API
+  setRating -- set your individual rating of the movie
+}
+
+
+//RECOMMENDATIONS COMPONENT
+class Recommendations 
+{ 
+  return_type? soloRecommendation
+  { returns movie recommendation based on user info
+  }
+
+  return_type? groupRecommendation
+  { combines each profile into one profile
+    calls soloRecommendation to return movie recommendation to satisfy all profiles
+  }
+}
+
+// USER FILTERS COMPONENTS 
+
+String[] userFilters(recommender API's list of movies)
+{ ask user for filters
+  if(there are filters)
+    rank movies from which satisfies criteria most to least 
+  else 
+    output list of movies  
+  //This method will use IMDB API to check what movies agree with the selected filters
+}
