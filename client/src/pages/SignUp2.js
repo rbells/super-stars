@@ -41,7 +41,6 @@ function SignUp2() {
 
         <div className="form-container">
             <form className = "register-form">
-                <br></br>
 
                 <label for="firstName">Enter your first name:</label>
                 <br></br>
