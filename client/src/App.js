@@ -11,6 +11,8 @@ import Axios from 'axios';
 import './App.css';
 
 function App() {
+
+  document.title = 'CineMake';
   
   const [userDetails,setUserDetails] = useState({
     loggedIn:'',
