@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import '../App.css';
 import Axios from 'axios';
+import './SignUp2.css';
 
 
 function SignUp2() {
@@ -37,9 +38,6 @@ function SignUp2() {
         <h1>
             SignUp
         </h1>
-        <head>
-            <link rel="stylesheet" href="SignUp2.css"></link>
-        </head>
 
         <div className="form-container">
             <form className = "register-form">
