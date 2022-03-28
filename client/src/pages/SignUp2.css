@@ -1,3 +1,4 @@
-* {
-    text-align: center;
+.form-field {
+    width: 50%;
+    margin: 0 auto;
 }

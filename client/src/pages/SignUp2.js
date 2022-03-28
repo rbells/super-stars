@@ -99,6 +99,7 @@ function SignUp2() {
             >
                 Submit
             </button>
+            <br></br>
         </div>
     </div>
     )
