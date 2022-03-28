@@ -37,8 +37,16 @@ function SignUp2() {
         <h1>
             SignUp
         </h1>
+        <head>
+            <link rel="stylesheet" href="SignUp2.css"></link>
+        </head>
+
         <div className="form-container">
             <form className = "register-form">
+                <br></br>
+
+                <label for="firstName">Enter your first name:</label>
+                <br></br>
                 <input 
                 onChange={handleFirstNameInputChange}
                 value={values.firstName}
@@ -46,6 +54,11 @@ function SignUp2() {
                 placeholder="First Name"
                 name="firstName">
                 </input>
+                <br></br>
+                <br></br>
+
+                <label for="lastName">Enter your last name:</label>
+                <br></br>
                 <input
                 onChange={handleLastNameInputChange}
                 value={values.lastName}
@@ -53,6 +66,12 @@ function SignUp2() {
                 placeholder="Last Name"
                 name="lastName">
                 </input>
+                <br></br>
+                <br></br>
+
+
+                <label for="username">Create your username:</label>
+                <br></br>
                 <input
                 onChange={handleUsernameInputChange}
                 value={values.userame}
@@ -60,6 +79,11 @@ function SignUp2() {
                 placeholder="Username"
                 name="username">
                 </input>
+                <br></br>
+                <br></br>
+
+                <label for="password">Create your password:</label>
+                <br></br>
                 <input
                 onChange={handlePasswordInputChange}
                 value={values.password}
@@ -67,6 +91,8 @@ function SignUp2() {
                 placeholder="Password"
                 name="password">
                 </input>
+                <br></br>
+                <br></br>
             </form>
             <button
             onClick = {handleSubmit}

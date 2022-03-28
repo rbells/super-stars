@@ -52,18 +52,27 @@ function SignIn() {
         </h1>
         <div className="form-container">
             <form className = "register-form">
+                <label for="username">Enter your username:</label>
+                <br></br>
                 <input
                 onChange={handleUsernameInputChange}
                 value={values.givenUserame}
                 className="form-field"
                 placeholder="Username"
+                type="username"
                 name="username">
                 </input>
+                <br></br>
+                <br></br>
+
+                <label for="password">Enter your password:</label>
+                <br></br>
                 <input
                 onChange={handlePasswordInputChange}
                 value={values.givenPassword}
                 className="form-field"
                 placeholder="Password"
+                type="password"
                 name="password">
                 </input>
             </form>
