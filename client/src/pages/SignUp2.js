@@ -33,12 +33,10 @@ function SignUp2() {
          password: values.password});
     }
 
-// Test comments to tutorial GitHub
-
     return(
     <div>
         <h1>
-            SignUp
+            Sign Up
         </h1>
 
         <div className="form-container">

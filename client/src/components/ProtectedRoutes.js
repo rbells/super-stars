@@ -13,7 +13,7 @@ Axios.defaults.withCredentials = true;
 const useAuth = () =>{
     Axios.get("http://localhost:3001/api/login").then((response) =>{
             console.log(response.data.loggedIn);
-            if(response.data.loggedIn == true){
+            if(response.data.loggedIn === true){
                 loggedIn = true;
             }else{
                 loggedIn = false;

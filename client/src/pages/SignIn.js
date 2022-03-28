@@ -39,7 +39,7 @@ function SignIn() {
     //Check if still logged in on refresh
     useEffect(()=>{
         Axios.get("http://localhost:3001/api/login").then((response) =>{
-            if(response.data.loggedIn == true){
+            if(response.data.loggedIn === true){
                 setLoginStatus(response.data.user[0].firstName);
             // console.log(response.data.user[0].firstName);
             }  

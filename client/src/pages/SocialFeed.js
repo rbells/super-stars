@@ -9,7 +9,7 @@ function SocialFeed() {
     Axios.defaults.withCredentials = true;
     useEffect(()=>{
         Axios.get("http://localhost:3001/api/login").then((response) =>{
-            if(response.data.loggedIn == true){
+            if(response.data.loggedIn === true){
                 setUser(response.data.user[0].firstName);
                 console.log(response.data.user[0].firstName);
             }  
