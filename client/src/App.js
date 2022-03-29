@@ -10,6 +10,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 import Profile from './pages/Profile';
 import Axios from 'axios';
 import './App.css';
+import Home from "./pages/Home/Home"
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
 
     //this needs to be here
     Axios.defaults.withCredentials = true;
+
+  
 
     //get details on refresh
     useEffect(()=>{
@@ -36,13 +39,14 @@ function App() {
   return (
     <div>
       <Navbar />
+      <Home/>
       <Routes>
         <Route path="/signup" element={[<SignUp2 />, <SignIn/>]} />
-        <Route element={<ProtectedRoutes />}>
-          <Route path="/socialfeed" element={<SocialFeed />} />
+        <Route path="/socialfeed" element={<SocialFeed />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/ratemovies" element={<RateMovies />} />
           <Route path="/profile" element={<Profile />} />
+        <Route element={<ProtectedRoutes />}>
         </Route>
       </Routes>
     </div>
