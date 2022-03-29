@@ -61,6 +61,18 @@ app.get('/api/login', (req,res)=>{
     }
 })
 
+app.get('/api/usersearch', (req,res)=>{
+    
+    const search = req.body.search;
+    const userSearch = "SELECT * FROM users WHERE username LIKE '%" + search + "%';"
+    console.log(userSearch);
+
+    db.query(userSearch, (err,result)=>{
+        res.send(result);
+        console.log(result);
+    })
+});
+
 app.post('/api/insert', (req,res)=>{
 
     const firstName = req.body.firstName;
