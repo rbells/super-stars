@@ -7,6 +7,7 @@ import SignIn from './pages/SignIn';
 import RateMovies from './pages/RateMovies';
 import ProtectedRoutes from './components/ProtectedRoutes';
 import {Routes, Route, useNavigate} from 'react-router-dom';
+import Profile from './pages/Profile';
 import Axios from 'axios';
 import './App.css';
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/socialfeed" element={<SocialFeed />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/ratemovies" element={<RateMovies />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
       </Routes>
     </div>
