@@ -86,6 +86,19 @@ app.post('/api/insert', (req,res)=>{
     });
 });
 
+app.post('/api/rating', (req,res)=>{
+
+    const title = req.body.title;
+    const rating = req.body.rating;
+    const review = req.body.review;
+    const user_id = req.body.user_id;
+
+    const sqlInsertReview = "INSERT INTO ratings(title, user_id, rating, review) VALUES (?, ?, ?, ?);"
+    db.query(sqlInsertReview, [title, user_id, rating, review], (err,result)=>{
+        console.log(err);
+    });
+});
+
 app.listen(3001, () => {
     console.log("running on port 3001");
 });
