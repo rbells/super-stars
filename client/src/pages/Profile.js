@@ -1,4 +1,5 @@
 import React from "react";
+import Follow from "../components/Follow";
 import '../App.css';
 
 
@@ -9,6 +10,7 @@ function Profile() {
         <h1>
             Profile
         </h1>
+        <Follow />
     </div>
     
     )

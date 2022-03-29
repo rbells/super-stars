@@ -61,6 +61,18 @@ app.get('/api/login', (req,res)=>{
     }
 })
 
+app.get('/api/usersearch', (req,res)=>{
+    
+    const search = req.body.search;
+    const userSearch = "SELECT * FROM users WHERE username LIKE '%" + search + "%';"
+    console.log(userSearch);
+
+    db.query(userSearch, (err,result)=>{
+        res.send(result);
+        console.log(result);
+    })
+});
+
 app.post('/api/insert', (req,res)=>{
 
     const firstName = req.body.firstName;
@@ -70,6 +82,19 @@ app.post('/api/insert', (req,res)=>{
 
     const sqlInsert = "INSERT INTO users (username,password,firstName,lastName) VALUES (?,?,?,?);"
     db.query(sqlInsert, [username,password,firstName,lastName], (err,result)=>{
+        console.log(err);
+    });
+});
+
+app.post('/api/rating', (req,res)=>{
+
+    const title = req.body.title;
+    const rating = req.body.rating;
+    const review = req.body.review;
+    const user_id = req.body.user_id;
+
+    const sqlInsertReview = "INSERT INTO ratings(title, user_id, rating, review) VALUES (?, ?, ?, ?);"
+    db.query(sqlInsertReview, [title, user_id, rating, review], (err,result)=>{
         console.log(err);
     });
 });
