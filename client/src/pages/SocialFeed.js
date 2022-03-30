@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import Axios from 'axios';
 import '../App.css';
+import Home from '../pages/Home/Home';
+
 
 function SocialFeed() {
 
@@ -18,6 +20,7 @@ function SocialFeed() {
 
     return(
     <div>
+        <Home />
         <h1>
             Social Feed for
             {user}

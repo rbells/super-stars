@@ -10,7 +10,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom';
 import Profile from './pages/Profile';
 import Axios from 'axios';
 import './App.css';
-import Home from "./pages/Home/Home"
+
 
 function App() {
 
@@ -39,7 +39,6 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Home/>
       <Routes>
         <Route path="/signup" element={[<SignUp2 />, <SignIn/>]} />
         <Route path="/socialfeed" element={<SocialFeed />} />
