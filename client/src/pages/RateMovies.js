@@ -56,9 +56,7 @@ function RateMovies() {
             <div className = 'col'>
                 <h1>Movies</h1>
             </div>
-            <br></br>
-            <br></br>
-            <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} className="searchBox"/>
+            <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
         </div>
             <div className='row'>
                 <MovieList handleClick={rateThisMovie} movies={movies}/>
