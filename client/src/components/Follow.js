@@ -8,7 +8,7 @@ function Follow(){
     const [usersFound, setUsersFound] = useState([]);
 
     const getUserSearch = () =>{
-        Axios.get("http://localhost:3001/api/usersearch",{
+        Axios.post("http://localhost:3001/api/usersearch",{
             search: searchValue
         }).then((response) =>{
             console.log(response);
