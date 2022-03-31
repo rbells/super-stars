@@ -61,10 +61,11 @@ app.get('/api/login', (req,res)=>{
     }
 })
 
-app.get('/api/usersearch', (req,res)=>{
+app.post('/api/usersearch', (req,res)=>{
     
     const search = req.body.search;
     const userSearch = "SELECT * FROM users WHERE username LIKE '%" + search + "%';"
+    
     console.log(userSearch);
 
     db.query(userSearch, (err,result)=>{
@@ -98,6 +99,25 @@ app.post('/api/rating', (req,res)=>{
         console.log(err);
     });
 });
+
+app.post('/api/getposts', (req,res)=>{
+    const userID = req.body.userID; 
+
+    const sqlSelectPosts = "SELECT * FROM ratings WHERE user_id = ? ORDER BY id DESC;"
+    db.query(sqlSelectPosts, [userID], (err,result)=>{
+            res.send(result);
+    });
+})
+
+app.post('/api/IDtoUsername', (req,res)=>{
+    const ID = req.body.ID; 
+
+    const sqlGetUsername = "SELECT username FROM users WHERE id=?;"
+    db.query(sqlGetUsername, ID, (err,result)=>{
+            res.send(result);
+    });
+})
+
 
 app.listen(3001, () => {
     console.log("running on port 3001");
