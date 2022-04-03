@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import Navbar from "./components/Navbar/Navbar"
 import SocialFeed from "./pages/SocialFeed";
-import Recommendations from "./pages/Recommendations";
+import Recommendations from "./pages/Recommendations/Recommendations";
+import SoloRecommendations from './pages/Recommendations/SoloRecommendations';
+import UserFilters from './pages/Recommendations/UserFilters';
 import SignUp2 from './pages/SignUp2';
 import SignIn from './pages/SignIn';
 import RateMovies from './pages/RateMovies';
@@ -45,6 +47,8 @@ function App() {
         <Route element={<ProtectedRoutes />}>
           <Route path="/socialfeed" element={<SocialFeed />} />
           <Route path="/recommendations" element={<Recommendations />} />
+          <Route path="/recommendations/solorecommendations" element={<SoloRecommendations/>} />
+          <Route path="/recommendations/userfilters" element={<UserFilters/>} />
           <Route path="/ratemovies" element={<RateMovies />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/testing" element={<Testing />} />

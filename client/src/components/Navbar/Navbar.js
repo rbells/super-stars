@@ -36,32 +36,32 @@ class Navbar extends Component {
 const MenuItems = [
     {
         title: 'Profile',
-        url: 'profile',
+        url: '/profile',
         cName: 'nav-links'
     },
     {
         title: 'Social Feed',
-        url: 'socialfeed',
+        url: '/socialfeed',
         cName: 'nav-links'
     },
     {
         title: 'Recommendations',
-        url: 'recommendations',
+        url: '/recommendations',
         cName: 'nav-links'
     },
     {
         title: 'Sign Up',
-        url: 'signup',
+        url: '/signup',
         cName: 'nav-links'
     },
     {
         title: 'Rate Movies',
-        url: 'ratemovies',
+        url: '/ratemovies',
         cName: 'nav-links'
     },
     {
         title: 'Testing',
-        url: 'testing',
+        url: '/testing',
         cName: 'nav-links'
     }
 ]

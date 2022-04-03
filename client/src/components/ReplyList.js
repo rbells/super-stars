@@ -7,7 +7,7 @@ function ReplyList(props){
         <div>
             <>
                 {props.replies.map((reply, index)=> <div>
-                    <p>{reply.user_id} : {reply.reply}</p>
+                    <p>{props.changeIDtoUsername(reply.user_id)} : {reply.reply}</p>
                 </div>)}
             </>
         </div>

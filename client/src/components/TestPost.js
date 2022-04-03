@@ -36,7 +36,7 @@ function TestPost(props){
                 <button onClick={handleReplyClick}>Reply</button>
                 <button onClick={handleSeeRepliesClick}>See Replies</button>
             </div>
-            <ReplyList replies={replyClickDetails}/>
+            <ReplyList changeIDtoUsername={props.changeIDtoUsername} replies={replyClickDetails}/>
         </div>
     )
 

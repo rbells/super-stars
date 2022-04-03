@@ -23,7 +23,13 @@ function TestPostList(props) {
             <>
             <button onClick={test}>Test2</button>
                 {props.posts.map((post, index)=> <div>
-                    <TestPost user={props.user.userID} id={post.id} title={post.title} review={post.review} rating={post.rating} author={changeIDtoUsername(post.user_id)}/>
+                    <TestPost user={props.user.userID}
+                              changeIDtoUsername={changeIDtoUsername} 
+                              id={post.id} 
+                              title={post.title} 
+                              review={post.review} 
+                              rating={post.rating} 
+                              author={changeIDtoUsername(post.user_id)}/>
                 </div>)}
             </>
         )
