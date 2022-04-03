@@ -18,7 +18,6 @@ function RateMovies() {
         Axios.get("http://localhost:3001/api/login").then((response) =>{
             if(response.data.loggedIn === true){
                 setUser(response.data.user[0].id);
-                console.log(user);
             }  
         })
     },[]);

@@ -39,7 +39,7 @@ function Testing(){
             <Follow />
             <h1>Posts</h1>
             <button onClick={()=>(console.log(postDetails))}>Test</button>
-            <TestPostList posts={postDetails} />
+            <TestPostList user={userDetails} posts={postDetails} />
         </div>
     )
 }

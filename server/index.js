@@ -118,6 +118,27 @@ app.post('/api/IDtoUsername', (req,res)=>{
     });
 })
 
+app.post('/api/reply', (req,res)=>{
+
+    const user_id = req.body.user_id;
+    const reply = req.body.reply;
+    const original_id = req.body.original_id;
+
+    const sqlInsertReview = "INSERT INTO replies(original_id, reply, user_id) VALUES (?, ?, ?);"
+    db.query(sqlInsertReview, [original_id, reply, user_id], (err,result)=>{
+        console.log(err);
+    });
+});
+
+app.post('/api/seereplies', (req,res)=>{
+    const original_id = req.body.original_id; 
+
+    const sqlGetReplies = "SELECT * FROM replies WHERE original_id = ? ORDER BY id DESC;"
+    db.query(sqlGetReplies, [original_id], (err,result)=>{
+            res.send(result);
+            console.log(result);
+    });
+})
 
 app.listen(3001, () => {
     console.log("running on port 3001");
