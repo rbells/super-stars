@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import TestPostList from "../components/TestPostList";
 import Follow from "../components/Follow";
+import FriendsList from '../components/FriendsList';
 import "../App.css";
 
 function Testing(){
@@ -36,7 +37,9 @@ function Testing(){
 
     return(
         <div>
-            <Follow />
+            <Follow user={userDetails}/>
+            <h1>Friends</h1>
+            <FriendsList user={userDetails}/>
             <h1>Posts</h1>
             <button onClick={()=>(console.log(postDetails))}>Test</button>
             <TestPostList user={userDetails} posts={postDetails} />

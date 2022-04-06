@@ -8,7 +8,7 @@ function FollowList(props){
             <>
             {props.usersFound.slice(0,6).map((user,index)=>
                 <div>
-                    <h1>{user.username}</h1>
+                    <h1 onClick={()=>props.handleClick(user)}>{user.username}</h1>
                 </div>
             )}
             </>

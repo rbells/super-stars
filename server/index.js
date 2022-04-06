@@ -140,6 +140,25 @@ app.post('/api/seereplies', (req,res)=>{
     });
 })
 
+app.post('/api/follow', (req,res)=>{
+    const user_id = req.body.user;
+    const friend_id = req.body.friend;
+
+    const sqlFollow = "INSERT INTO friends(user_id, friend_id) VALUES (?, ?);"
+    db.query(sqlFollow, [user_id, friend_id]), (err,result)=>{
+        console.log(err);
+    }
+})
+
+app.post('/api/getfriendslist', (req,res)=>{
+    const userID = req.body.userID; 
+
+    const sqlGetFriendsList = "SELECT * FROM friends WHERE user_id = ?;"
+    db.query(sqlGetFriendsList, [userID], (err,result)=>{
+            res.send(result);
+    });
+})
+
 app.listen(3001, () => {
     console.log("running on port 3001");
 });
