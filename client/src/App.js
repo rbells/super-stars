@@ -29,8 +29,6 @@ function App() {
     //this needs to be here
     Axios.defaults.withCredentials = true;
 
-  
-
     //get details on refresh
     useEffect(()=>{
         Axios.get("http://localhost:3001/api/login").then((response) =>{
@@ -42,6 +40,10 @@ function App() {
         })
     },[]);
 
+
+    //This is here temporarily to make solo recommendations work
+    let selections=[];
+
   return (
     <div>
       <Navbar />
@@ -50,7 +52,7 @@ function App() {
         <Route element={<ProtectedRoutes />}>
           <Route path="/socialfeed" element={<SocialFeed />} />
           <Route path="/recommendations" element={<Recommendations />} />
-          <Route path="/recommendations/solorecommendations" element={<SoloRecommendations/>} />
+          <Route path="/recommendations/solorecommendations" element={<SoloRecommendations selections={selections}/>} />
           <Route path="/recommendations/grouprecommendations" element={<GroupRecommendations user={userDetails}/>} />
           <Route path="/recommendations/userfilters" element={<UserFilters/>} />
           <Route path="/ratemovies" element={<RateMovies />} />
