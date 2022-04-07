@@ -1,12 +1,7 @@
-<<<<<<< Updated upstream
 import React,{useState} from 'react';
 import Axios from 'axios';
 import ReplyList from './ReplyList';
 import './TestPost.css';
-=======
-import React from 'react';
-// import './TestPost.css';
->>>>>>> Stashed changes
 
 function TestPost(props){
 
