@@ -1,7 +1,7 @@
 .TopbarContainer {
     height: 50px;
     width: 100%;
-    background-color: blueviolet;
+    background-color:#838bfe;
     display: flex;
     align-items: center;
     position: sticky;
@@ -22,7 +22,7 @@
 
 .topbarCenter {
     flex: 5;
-    background-color: blueviolet;
+    background-color: #838bfe;
 }
 
 .searchbar {
