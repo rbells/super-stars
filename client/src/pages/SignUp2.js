@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import '../App.css';
 import Axios from 'axios';
 import './SignUp2.css';
+import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
 
 
 function SignUp2() {
@@ -25,12 +26,85 @@ function SignUp2() {
         setValues({...values,password: e.target.value})
     }
 
+    
+
+    function director() {
+
+        this.construct = function(builder) {
+            builder.step1();
+            builder.step2();
+            return builder.get();
+        }
+
+
+        /* build() {
+            const user = new Object();
+            return user;
+        } */
+    }
+
+    function userBuilder() {
+        this.user = null;
+
+        this.step1 = function () {
+            this.user = new user();
+        };
+    
+        this.step2 = function () {
+            this.user.addInfo();
+        };
+    
+        this.get = function () {
+            return this.user;
+        };
+
+    }
+
+    function user() {
+        this.birthday = null;
+
+        this.addInfo = function () {
+            this.firstName = values.firstName;
+            this.lastName = values.lastName;
+            this.username = values.username;
+            this.password = values.password;
+        }
+
+    }
+
+    /* class userBuilder {
+
+        constructor(firstName, lastName) {
+            this.firstName = values.firstName;
+            this.lastName = values.lastName;
+            return this;
+        }
+
+        constructor(username) {
+            this.username = values.username;
+            return this;
+        }
+
+        constructor(password) {
+            this.password = values.password;
+            return this;
+        }
+    } */
+    
     const handleSubmit = function(firstName,lastName,username,password){
+        
+        var director = new director();
+        var userBuilder = new userBuilder();
+        var user = director.construct(userBuilder);
+
+
+        // const user = new Object.userBuilder(values.firstName, values.lastName, values.username, values.password);
+        
         Axios.post('http://localhost:3001/api/insert', 
-        {firstName: values.firstName,
-         lastName: values.lastName,
-         username: values.username,
-         password: values.password});
+        {firstName: user.firstName,
+         lastName: user.lastName,
+         username: user.username,
+         password: user.password});
     }
 
     return(
