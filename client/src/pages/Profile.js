@@ -55,12 +55,16 @@ function Profile() {
              <div className="profileRight">
                 <div className="profileRightTop">
                     <div className-="profileCover">
-                        <img className="profileCoverImg" Scr="assets/post/3.jpeg" alt=""/>
-                        <img className="profileUserImg" scr="assets/person/7.jpeg" alt=""/>
+                        <img className="profileCoverImg" 
+                            scr="assets/post/3.jpeg" 
+                            alt=""/>
+                        <img className="profileUserImg" 
+                            scr="assets/person/7.jpeg" 
+                            alt=""/>
                     </div>
                     <div className="profileInfo">
-                        <h4 className="profileInfoName">Superstars</h4>
-                        <span className="profileInforDesc">Hello my friends</span>
+                        <h4 className="profileInfoName">Team Superstars</h4>
+                        <span className="profileInforDesc">I love computer science.</span>
                     </div>
                     </div>
                 <div className="profileRightBottom">
