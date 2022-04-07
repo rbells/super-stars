@@ -25,7 +25,7 @@
     grid-gap: 10px;
     list-style: none;
     text-align: center;
-    width: 70vw;
+    width: 100vw;
     justify-content: end;
     margin-right: 2rem;
 }
@@ -37,7 +37,7 @@
 }
 
 .nav-links:hover {
-    background-color: #6d76f7;
+    background-color: #838bfe;
     border-radius: 4px;
     transition: all 0.2s ease-out;
 }
