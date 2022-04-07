@@ -1,9 +1,10 @@
 .Rightbar {
-    flex: 3.5;
+    flex:3.5;
 }
 
 .RightbarWrapper{
     padding: 20px 20px 0 0;
+    background-color: #7c82ff;
 }
 
 .BirthdayContainer{
