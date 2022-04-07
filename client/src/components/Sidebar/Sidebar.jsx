@@ -31,6 +31,7 @@ export default function sidebar() {
                     <button className="SidebarButton">Show More</button>
                     <hr className="SidebarHR"/>
                     <ul className="SidebarFriendsList">
+                        <h4 className="SidebarTitle">Friends</h4>
                         <li className="SidebarFriends">
                             <img className="SidebarFriendImg" scr="" alt=""/>
                             <span className="SidebarFriendName">Teddie</span>
