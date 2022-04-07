@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import '../App.css';
 import Axios from 'axios';
 import './SignUp2.css';
+import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
 
 
 function SignUp2() {
@@ -25,12 +26,43 @@ function SignUp2() {
         setValues({...values,password: e.target.value})
     }
 
+    
+
+    class user {
+        build() {
+            const user = new Object();
+            return user;
+        }
+    }
+
+    class userBuilder {
+
+        constructor(firstName, lastName) {
+            this.firstName = values.firstName;
+            this.lastName = values.lastName;
+            return this;
+        }
+
+        constructor(username) {
+            this.username = values.username;
+            return this;
+        }
+
+        constructor(password) {
+            this.password = values.password;
+            return this;
+        }
+    }
+    
     const handleSubmit = function(firstName,lastName,username,password){
+        
+        const user = new Object.userBuilder(values.firstName, values.lastName, values.username, values.password);
+        
         Axios.post('http://localhost:3001/api/insert', 
-        {firstName: values.firstName,
-         lastName: values.lastName,
-         username: values.username,
-         password: values.password});
+        {firstName: user.firstName,
+         lastName: user.lastName,
+         username: user.username,
+         password: user.password});
     }
 
     return(
