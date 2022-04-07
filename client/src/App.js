@@ -4,6 +4,7 @@ import SocialFeed from "./pages/SocialFeed";
 import Recommendations from "./pages/Recommendations/Recommendations";
 import SoloRecommendations from './pages/Recommendations/SoloRecommendations';
 import UserFilters from './pages/Recommendations/UserFilters';
+import GroupRecommendations from './pages/Recommendations/GroupRecommendations';
 import SignUp2 from './pages/SignUp2';
 import SignIn from './pages/SignIn';
 import RateMovies from './pages/RateMovies';
@@ -21,7 +22,8 @@ function App() {
   
   const [userDetails,setUserDetails] = useState({
     loggedIn:'',
-    firstName:''
+    firstName:'',
+    user_id: ''
   });
 
     //this needs to be here
@@ -34,7 +36,8 @@ function App() {
         Axios.get("http://localhost:3001/api/login").then((response) =>{
             if(response.data.loggedIn == true){ 
                 setUserDetails({...userDetails,firstName: response.data.user[0].firstName, 
-                                                loggedIn: response.data.loggedIn});
+                                                loggedIn: response.data.loggedIn,
+                                                user_id: response.data.user[0].id});
             }  
         })
     },[]);
@@ -48,6 +51,7 @@ function App() {
           <Route path="/socialfeed" element={<SocialFeed />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/recommendations/solorecommendations" element={<SoloRecommendations/>} />
+          <Route path="/recommendations/grouprecommendations" element={<GroupRecommendations user={userDetails}/>} />
           <Route path="/recommendations/userfilters" element={<UserFilters/>} />
           <Route path="/ratemovies" element={<RateMovies />} />
           <Route path="/profile" element={<Profile />} />

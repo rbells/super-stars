@@ -1,14 +1,15 @@
 import React,{useEffect, useState} from 'react';
 import Axios from 'axios';
 
-function FriendsList(props){
+function FriendsList(){
 
     const [userDetails,setUserDetails] = useState({
         username:'',
         userID:''
       });
 
-      const [friendsList, setFriendsList] = useState([]);
+    const [friendsListID, setFriendsListID] = useState([]);
+    const [friendsState, setFriendsState] = useState([]);
 
     Axios.defaults.withCredentials = true;
 
@@ -23,25 +24,49 @@ function FriendsList(props){
 
     const getFriendsList = (user) =>{
         Axios.post("http://localhost:3001/api/getfriendslist",{userID: user.userID}).then((response) =>{
-            setFriendsList(response.data);
-            console.log("beep boop");
+            setFriendsListID(response.data);
         })
     }
 
-    const test =()=>{
-        console.log(friendsList);
-    }
     useEffect(()=>{
         getFriendsList(userDetails);
     }, [userDetails])
 
+
+    let friend;
+    let friends = [];
+    const changeIDtoUsername = async (ID) =>{
+        try{
+            friends = [];
+            await Axios.post("http://localhost:3001/api/IDtoUsername",{ID: ID}).then((response)=>{
+                return friend = (response.data);
+            }).then((data)=>{
+                   friends = [...friends,data[0].username];    
+            });
+            setFriendsState(friends);
+        } catch {
+            //error shmerror
+        }
+    }
+
+    const test =()=>{
+        for(let i=0; i < friendsListID.length; i++){
+            changeIDtoUsername(friendsListID[i].friend_id);
+        }
+    }
+
+    const test2 = () =>{
+        console.log(friendsState);
+    }
+
     return(
         <div>
             <button onClick={test}>Test</button>
+            <button onClick={test2}>Test 2</button>
             <>
-            {friendsList.map((friend,index)=>
+            {friendsState.map((friend,index)=>
                 <div>
-                    <h1>{friend.friend_id}</h1>
+                    <p>{friend}</p>
                 </div>
             )}
             </>

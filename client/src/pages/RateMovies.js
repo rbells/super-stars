@@ -10,14 +10,18 @@ function RateMovies() {
     const [movies, setMovies] = useState([]);
     const [searchValue, setSearchValue] = useState([]);
 
-    const [user, setUser] = useState([]);
+    const [userDetails,setUserDetails] = useState({
+        username:'',
+        userID:''
+      });
 
     Axios.defaults.withCredentials = true;
 
     useEffect(()=>{
         Axios.get("http://localhost:3001/api/login").then((response) =>{
             if(response.data.loggedIn === true){
-                setUser(response.data.user[0].id);
+                setUserDetails({...userDetails,username: response.data.user[0].username, 
+                                                userID: response.data.user[0].id});
             }  
         })
     },[]);
@@ -46,7 +50,8 @@ function RateMovies() {
         {title: title,
          rating: rating,
          review: review,
-         user_id: user
+         user_id: userDetails.userID,
+         author: userDetails.username
         });
     }
     return(

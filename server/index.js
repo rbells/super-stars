@@ -93,9 +93,10 @@ app.post('/api/rating', (req,res)=>{
     const rating = req.body.rating;
     const review = req.body.review;
     const user_id = req.body.user_id;
+    const author = req.body.author;
 
-    const sqlInsertReview = "INSERT INTO ratings(title, user_id, rating, review) VALUES (?, ?, ?, ?);"
-    db.query(sqlInsertReview, [title, user_id, rating, review], (err,result)=>{
+    const sqlInsertReview = "INSERT INTO ratings(title, user_id, rating, review, author) VALUES (?, ?, ?, ?, ?);"
+    db.query(sqlInsertReview, [title, user_id, rating, review, author], (err,result)=>{
         console.log(err);
     });
 });
@@ -107,6 +108,15 @@ app.post('/api/getposts', (req,res)=>{
     db.query(sqlSelectPosts, [userID], (err,result)=>{
             res.send(result);
     });
+})
+
+app.post('/api/getfriendsposts', (req, res)=>{
+    const friendIDs = req.body.friendIDs;
+
+    const sqlGetFriendsPosts = "SELECT * FROM ratings WHERE user_id IN (?) ORDER BY id DESC;";
+    db.query(sqlGetFriendsPosts, [friendIDs], (err,result)=>{
+        res.send(result);
+    })
 })
 
 app.post('/api/IDtoUsername', (req,res)=>{
@@ -123,9 +133,10 @@ app.post('/api/reply', (req,res)=>{
     const user_id = req.body.user_id;
     const reply = req.body.reply;
     const original_id = req.body.original_id;
+    const author = req.body.author;
 
-    const sqlInsertReview = "INSERT INTO replies(original_id, reply, user_id) VALUES (?, ?, ?);"
-    db.query(sqlInsertReview, [original_id, reply, user_id], (err,result)=>{
+    const sqlInsertReview = "INSERT INTO replies(original_id, reply, user_id, author) VALUES (?, ?, ?, ?);"
+    db.query(sqlInsertReview, [original_id, reply, user_id, author], (err,result)=>{
         console.log(err);
     });
 });

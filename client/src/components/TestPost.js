@@ -10,9 +10,10 @@ function TestPost(props){
     const handleReplyClick = ()=>{
         let reply = prompt("Reply: ?")
         Axios.post('http://localhost:3001/api/reply', 
-        {user_id: props.user,
+        {user_id: props.user.userID,
          original_id: props.id,
-         reply: reply
+         reply: reply,
+         author: props.user.username
         });
     };
 
@@ -26,7 +27,6 @@ function TestPost(props){
     })
     }
 
-
     return(
         <div className="testPost">
             <p>{props.title}</p>
@@ -36,7 +36,7 @@ function TestPost(props){
                 <button onClick={handleReplyClick}>Reply</button>
                 <button onClick={handleSeeRepliesClick}>See Replies</button>
             </div>
-            <ReplyList changeIDtoUsername={props.changeIDtoUsername} replies={replyClickDetails}/>
+            <ReplyList replies={replyClickDetails}/>
         </div>
     )
 

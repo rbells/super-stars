@@ -13,23 +13,17 @@ function TestPostList(props) {
             return(author);
     }
 
-    const test = () =>{
-        console.log(changeIDtoUsername(9));
-    }
-
     if (props.posts.length > 0)
     {
         return(
             <>
-            <button onClick={test}>Test2</button>
                 {props.posts.map((post, index)=> <div>
-                    <TestPost user={props.user.userID}
-                              changeIDtoUsername={changeIDtoUsername} 
+                    <TestPost user={props.user}
                               id={post.id} 
                               title={post.title} 
                               review={post.review} 
                               rating={post.rating} 
-                              author={changeIDtoUsername(post.user_id)}/>
+                              author={post.author}/>
                 </div>)}
             </>
         )

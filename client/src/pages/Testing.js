@@ -3,6 +3,7 @@ import Axios from 'axios';
 import TestPostList from "../components/TestPostList";
 import Follow from "../components/Follow";
 import FriendsList from '../components/FriendsList';
+import TestFeedList from '../components/TestFeedList';
 import "../App.css";
 
 function Testing(){
@@ -14,6 +15,8 @@ function Testing(){
 
     const[postDetails, setPostDetails] = useState([]);
 
+    const [friendsListID, setFriendsListID] = useState([]);
+
     Axios.defaults.withCredentials = true;
 
     useEffect(()=>{
@@ -24,6 +27,16 @@ function Testing(){
             }  
         })
     },[]);
+
+    useEffect(()=>{
+        getFriendsList(userDetails)
+    },[userDetails])
+
+    const getFriendsList = (user) =>{
+        Axios.post("http://localhost:3001/api/getfriendslist",{userID: user.userID}).then((response) =>{
+            setFriendsListID(response.data);
+        })
+    }
 
     const getPosts = (user) =>{
         Axios.post("http://localhost:3001/api/getposts",{userID: user.userID}).then((response) =>{
@@ -37,6 +50,8 @@ function Testing(){
 
     return(
         <div>
+            <h1>Feed</h1>
+            <TestFeedList friends={friendsListID} user={userDetails}/>
             <Follow user={userDetails}/>
             <h1>Friends</h1>
             <FriendsList user={userDetails}/>

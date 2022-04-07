@@ -15,6 +15,11 @@ function Recommendations() {
         navigate(path);
     }
 
+    const routeToGroupRecommendation = () =>{
+        let path = 'grouprecommendations';
+        navigate(path);
+    }
+
     return(
     <div>
         <h1>
@@ -27,7 +32,7 @@ function Recommendations() {
         </div> 
         <h2>Watching With Friends</h2>
         <div>
-            <button>Start The Watch Group</button>
+            <button onClick={routeToGroupRecommendation}>Start The Watch Group</button>
         </div>
 
     </div>
