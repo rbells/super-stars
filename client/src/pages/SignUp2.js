@@ -109,7 +109,7 @@ function SignUp2() {
 
     return(
     <div>
-        <h1>
+        <h1 className="signUpTitle">
             Sign Up
         </h1>
 

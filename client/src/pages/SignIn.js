@@ -49,7 +49,7 @@ function SignIn() {
     return(
     <div>
         <br></br>
-        <h1>
+        <h1 className="signTitle">
             Sign In
         </h1>
         <div className="form-container">
