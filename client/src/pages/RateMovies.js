@@ -54,6 +54,22 @@ function RateMovies() {
          author: userDetails.username
         });
     }
+
+    const starWrapper = document.querySelector(".stars a");
+    const stars = document.querySelectorAll(".stars a");
+
+    stars.forEach((star, clickedIdx) => {
+        star.addEventListener("click", () => {
+            starWrapper.classList.add('disabled');
+            stars.forEach((otherStar, otherIdx) => {
+                if (otherIdx <= clickedIdx) {
+                    otherStar.classList.add("active");
+                }
+            });
+            console.log('star of index ${idx + 1} was clicked');
+        });
+    });
+
     return(
     <div className='container-fluid movie-app'>
         <div className ='row d-flex align-items-center mt-4 mb-4'>
@@ -64,7 +80,14 @@ function RateMovies() {
         </div>
             <div className='row'>
                 <MovieList handleClick={rateThisMovie} movies={movies}/>
-        </div> 
+            </div> 
+            {/* <div class="stars">
+                <a>1</a>
+                <a>2</a>
+                <a>3</a>
+                <a>4</a>
+                <a>5</a>
+            </div> */}
     </div>
     )
 }

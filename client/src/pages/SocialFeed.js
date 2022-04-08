@@ -49,7 +49,7 @@ function SocialFeed() {
 
     return(
     <div>
-        <Home />
+        <Home user={userDetails}/>
         <Feed friends={friendsListID} user={userDetails}/>
     </div>
     )

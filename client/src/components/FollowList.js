@@ -3,12 +3,12 @@ import "../App.css";
 import TestPost from "./TestPost";
 
 function FollowList(props){
-    if (props.usersFound.length > 0){
+    if (props.searchValue.length > 0){
         return(
             <>
             {props.usersFound.slice(0,6).map((user,index)=>
                 <div>
-                    <h1 onClick={()=>props.handleClick(user)}>{user.username}</h1>
+                    <button onClick={()=>props.handleClick(user)}>{user.username}</button>
                 </div>
             )}
             </>
@@ -16,7 +16,6 @@ function FollowList(props){
     } else {
         return(
             <div>
-                No users found
             </div>
         )
     }

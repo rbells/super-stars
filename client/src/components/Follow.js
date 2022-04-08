@@ -38,7 +38,7 @@ function Follow(props){
             Follow
             <SearchBox searchValue={searchValue} setSearchValue={setSearchValue}/>
             <div>
-                <FollowList usersFound={usersFound} handleClick={follow}/>
+                <FollowList usersFound={usersFound} handleClick={follow} searchValue={searchValue}/>
             </div>
         </div>
     )

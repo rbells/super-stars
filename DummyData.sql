@@ -52,9 +52,27 @@ INSERT INTO users (username, password,firstName,lastName) VALUES ('kirkmcbrayer'
 INSERT INTO users (username, password,firstName,lastName) VALUES ('rileybell', 'password', 'Riley', 'Bell');
 INSERT INTO users (username, password,firstName,lastName) VALUES ('emilyvu', 'password', 'Emily', 'Vu');
 INSERT INTO users (username, password,firstName,lastName) VALUES ('cameroncrochet', 'password', 'Cameron', 'Crochet');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('shellsbells', 'password', 'Shelly', 'Jones');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('allyj04', 'password', 'Ally', 'Johnson');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('joelMiller', 'password', 'Joel', 'Miller');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('chrisH98', 'password', 'Chris', 'Halls');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('samsters', 'password', 'Sammy', 'Flemington');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('JackA00', 'password', 'Jack', 'Adamo');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('A.poche', 'password', 'Adam', 'Poche');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('green.alex', 'password', 'Alex', 'Green');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('maddyCh', 'password', 'Madeline', 'Charles');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('franklyFrank', 'password', 'Frank', 'Lee');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('jasmineT', 'password', 'Jasmine', 'Tea');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('roseCollins', 'password', 'Rose', 'Collins');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('theDude', 'password', 'Jeff', 'Lebowski');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('waltPow', 'password', 'Walter', 'Powers');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('DonHenderson', 'password', 'Don', 'Henderson');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('charlie123', 'password', 'Charlie', 'Colgate');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('annaBanana', 'password', 'Anna', 'Sanders');
+INSERT INTO users (username, password,firstName,lastName) VALUES ('Dr.Beth', 'password', 'Beth', 'Rota');
 
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'cheese';
 flush privileges;
 
-Select * from users;
+Select * from ratings;
