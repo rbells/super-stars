@@ -41,7 +41,6 @@ function Feed(props) {
     {
         return(
             <div>
-                <button onClick={test}>test</button>
                 <>
                     {friendsPosts.map((post, index)=> <div>
                         <TestPost user={props.user}
