@@ -1,38 +1,33 @@
-.selected{
-    background-color: green;
-}
-
-.notSelected{
-    background-color: gray;
-}
-
-.userFilter{
+.recTitle{
     text-align: center;
     border: 3px solid white;
     background-color: #7c82ff;
 }
 
-.genre{
-    text-align: center;
-
-}
-
-.decade{
+.watchYourself{
     text-align: center;
 }
 
-.finished{
+.watchGroup{
     text-align: center;
 }
 
-.titleButton{
+.yourselfButton{
     text-align: center;
 }
 
-.genreButton{
+.anyButton{
     text-align: center;
 }
 
-.giveButton{
+.specButton{
+    text-align: center;
+}
+
+.groupButton{
+    text-align: center;
+}
+
+.groupBut{
     text-align: center;
 }
