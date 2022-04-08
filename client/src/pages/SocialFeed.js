@@ -50,9 +50,6 @@ function SocialFeed() {
     return(
     <div>
         <Home />
-        <h1>
-            SOcial Feed
-        </h1>
         <Feed friends={friendsListID} user={userDetails}/>
     </div>
     )
