@@ -1,5 +1,6 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom';
+import './Recommendations.css';
 
 function Recommendations() {
 
@@ -22,17 +23,17 @@ function Recommendations() {
 
     return(
     <div>
-        <h1>
+        <h1 className="recTitle">
             Recommendations
         </h1>
-        <h2>Watching By Yourself</h2>
-        <div>
-            <button onClick={routeToSoloRecommendation}>Give Me Anything!</button>
-            <button onClick={routeToUserFilters}>I Want Something More Specific</button>
-        </div> 
-        <h2>Watching With Friends</h2>
-        <div>
-            <button onClick={routeToGroupRecommendation}>Start The Watch Group</button>
+        <h2 className="watchYourself">Watching By Yourself</h2>
+        <div className="yourselfButton">
+            <button className="anyButton" onClick={routeToSoloRecommendation}>Give Me Anything!</button>
+            <button className="specButton" onClick={routeToUserFilters}>I Want Something More Specific</button>
+        </div>  
+        <h2 className="watchGroup">Watching With Friends</h2>
+        <div className="groupBut">
+            <button className="groupButton" onClick={routeToGroupRecommendation}>Start The Watch Group</button>
         </div>
 
     </div>

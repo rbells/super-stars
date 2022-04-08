@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import ScaleLoader from 'react-spinners/ScaleLoader';
+import './SoloRecommendation.css';
 
 function SoloRecommendations(props){
 
@@ -28,13 +29,13 @@ function SoloRecommendations(props){
                     <ScaleLoader color={"#4A90E2"} loading={loading} size={30} />
                     :
                     <div>
-                        <h1>This is the specific recommendations</h1>
-                        <h1>{props.selections}</h1>
-                            <img src={poster2}></img>
+                        <h1 className="specRecTitle">This is the specific recommendations</h1>
+                        <h1 className="selection">{props.selections}</h1>
+                            <center> <img src={poster2}></img> </center>
                             <div className="overlay d-flex align-items-center justify-content-center">
                                 <span>Rate This Movie</span>
                             </div>
-                            <div>
+                            <div className="seenButton">
                                 <button onClick={handleAlreadySeenClick}>Already Seen It</button>
                             </div>
                     </div>      
@@ -50,12 +51,12 @@ function SoloRecommendations(props){
                     <ScaleLoader color={"#4A90E2"} loading={loading} size={30} />
                     :
                     <div>
-                        <h1>This is the solo recommendations</h1>
-                            <img src={poster}></img>
+                        <h1 className="soloRecTitle">This is the solo recommendations</h1>
+                            <center> <img src={poster}></img> </center>
                             <div className="overlay d-flex align-items-center justify-content-center">
                                 <span>Rate This Movie</span>
                             </div>
-                            <div>
+                            <div className="seenButton2">
                                 <button onClick={handleAlreadySeenClick}>Already Seen It</button>
                             </div>
                     </div>      

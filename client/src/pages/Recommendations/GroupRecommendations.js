@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ScaleLoader from 'react-spinners/ScaleLoader';
 import FriendsList from '../../components/FriendsList.js';
 import Selection from './Selection';
+import './GroupRecommendation.css';
 import Axios from 'axios';
 
 function GroupRecommendations(props){
@@ -61,23 +62,23 @@ function GroupRecommendations(props){
     if (finalClick == true){
         return(
             <div>
-                <h1>{props.user.firstName}'s Watch Group</h1>
+                <h1 className="groupRecTitle">{props.user.firstName}'s Watch Group</h1>
                 {watchGroup.map((friend, index)=> (
                     <h1>{friend}</h1>
                 ))}
-                <img src={poster}></img>
+                <center> <img src={poster}></img> </center>
             </div>
         )
     } else {
         return(
             <div>
-                <h1>Select Your Watch Group</h1>
+                <h1 className="selectGroupTitle">Select Your Watch Group</h1>
                 <>
                 {friendsState.map((friend, index)=> (
                         <Selection addToSelections={addToWatchGroup} title={friend}/>
                 ))}
                 </>
-                <div>
+                <div className="giveButton">
                     <button onClick={handleFinalClick}>Give Us A Movie!</button>
                 </div>
             </div>
