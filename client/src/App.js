@@ -49,8 +49,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/signup" element={[<SignUp2 />, <SignIn/>]} />
-        <Route element={<ProtectedRoutes />}>
-          <Route path="/socialfeed" element={<SocialFeed />} />
+        <Route path="/socialfeed" element={<SocialFeed />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/recommendations/solorecommendations" element={<SoloRecommendations selections={selections}/>} />
           <Route path="/recommendations/grouprecommendations" element={<GroupRecommendations user={userDetails}/>} />
@@ -58,7 +57,9 @@ function App() {
           <Route path="/ratemovies" element={<RateMovies />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/testing" element={<Testing />} />
-        </Route>
+        //<Route element={<ProtectedRoutes />}>
+          
+        //</Route>
       </Routes>
     </div>
   );
