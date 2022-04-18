@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './profile.jpg';
 import "./Rightbar.css";
 
 export default function Rightbar() {
@@ -15,49 +16,49 @@ export default function Rightbar() {
                 <ul className="RigthbarFriendsList">
                     <li className="RigthbarFriends">
                         <div className="RightbarProfileImgContainer">
-                            <img className="RightbarProfileImg" src="" alt=""></img>
+                            <img className="RightbarProfileImg" src={logo} alt=""></img>
                             <span clasName="RightbarOnline"></span>
                         </div>
                         <span className="RightbarUsername">Finn</span>
                     </li>
                     <li className="RigthbarFriends">
                         <div className="RightbarProfileImgContainer">
-                            <img className="RightbarProfileImg" src="" alt=""></img>
+                            <img className="RightbarProfileImg" src={logo} alt=""></img>
                             <span clasName="RightbarOnline"></span>
                         </div>
                         <span className="RightbarUsername">Emily</span>
                     </li>
                     <li className="RigthbarFriends">
                         <div className="RightbarProfileImgContainer">
-                            <img className="RightbarProfileImg" src="" alt=""></img>
+                            <img className="RightbarProfileImg" src={logo} alt=""></img>
                             <span clasName="RightbarOnline"></span>
                         </div>
                         <span className="RightbarUsername">Riely</span>
                     </li>
                     <li className="RigthbarFriends">
                         <div className="RightbarProfileImgContainer">
-                            <img className="RightbarProfileImg" src="" alt=""></img>
+                            <img className="RightbarProfileImg" src={logo} alt=""></img>
                             <span clasName="RightbarOnline"></span>
                         </div>
                         <span className="RightbarUsername">Kelly</span>
                     </li>
                     <li className="RigthbarFriends">
                         <div className="RightbarProfileImgContainer">
-                            <img className="RightbarProfileImg" src="" alt=""></img>
+                            <img className="RightbarProfileImg" src={logo} alt=""></img>
                             <span clasName="RightbarOnline"></span>
                         </div>
                         <span className="RightbarUsername">Danny</span>
                     </li>
                     <li className="RigthbarFriends">
                         <div className="RightbarProfileImgContainer">
-                            <img className="RightbarProfileImg" src="" alt=""></img>
+                            <img className="RightbarProfileImg" src={logo} alt=""></img>
                             <span clasName="RightbarOnline"></span>
                         </div>
                         <span className="RightbarUsername">Harry</span>
                     </li>
                     <li className="RigthbarFriends">
                         <div className="RightbarProfileImgContainer">
-                            <img className="RightbarProfileImg" src="" alt=""></img>
+                            <img className="RightbarProfileImg" src={logo} alt=""></img>
                             <span clasName="RightbarOnline"></span>
                         </div>
                         <span className="RightbarUsername">Joe</span>

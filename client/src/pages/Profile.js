@@ -3,6 +3,8 @@ import '../App.css';
 import Sidebar from "../components/Sidebar/Sidebar";
 import ProfileFeed from "../components/Feed/ProfileFeed";
 import Rightbar from "../components/Rightbar/Rightbar";
+import logo from './propic.png';
+import background from './pbg.jpg';
 import './Profile.css';
 import Axios from 'axios';
 
@@ -56,10 +58,10 @@ function Profile() {
                 <div className="profileRightTop">
                     <div className-="profileCover">
                         <img className="profileCoverImg" 
-                            scr="assets/post/3.jpeg" 
+                            src={background} 
                             alt=""/>
                         <img className="profileUserImg" 
-                            scr="assets/person/7.jpeg" 
+                            src={logo} 
                             alt=""/>
                     </div>
                     <div className="profileInfo">
