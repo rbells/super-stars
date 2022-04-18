@@ -63,8 +63,8 @@ function Profile() {
                             alt=""/>
                     </div>
                     <div className="profileInfo">
-                        <h4 className="profileInfoName">Team Superstars</h4>
-                        <span className="profileInforDesc">I love computer science.</span>
+                        <h4 className="profileInfoName">John Doe</h4>
+                        <span className="profileInforDesc">"The Roger Ebert of the West"</span>
                     </div>
                     </div>
                 <div className="profileRightBottom">
