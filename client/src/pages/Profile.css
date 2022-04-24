@@ -6,8 +6,8 @@
     flex: 9;
 }
 .profileCover{
-    height: 320px;
-    position: relative;
+    height: 10px;
+    width: 60px;
 }
 
 .profileCoverImg{
@@ -46,4 +46,12 @@
 
 .profileRightBottom{
     display: flex;
+    width: 30%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.profileRightTop {
+
 }

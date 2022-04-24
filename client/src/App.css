@@ -1,4 +1,5 @@
 .App {
+  
   text-align: center;
 }
 
@@ -15,4 +16,16 @@
 
 body{
   background: white;
+}
+
+div h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
